@@ -1,0 +1,197 @@
+#--------------------------------------------------------------------
+# 消防地図共通化　レイヤ合成設定ファイル
+#    ・#コメント行とする。
+#    ・カンマ区切りとする。
+#    ・登録がない場合は、半角スペース１文字以上を入れる。
+#
+#  2015/04/03  V0000  初版作成
+#  2024/05/09  V0001  背景登録レイヤ追加
+##--------------------------------------------------------------------------------------------
+##--------------------------------------------------------------------------------------------
+# レイヤ合成メニュー
+##--------------------------------------------------------------------------------------------
+## ユーザシンボルと目標物種別との関連
+## USERSYMBOL,①,②
+##		①レイヤ合成名
+##		②種別(複数ある場合は:で区切る)
+##        合成対象がLANDMARK の場合、大分類単位で登録
+## USERSYMBOL,LAYERNAME,LANDMARK,大分類
+USERSYMBOL,目標物   ,1
+USERSYMBOL,対象物   ,2
+USERSYMBOL,危険物   ,3
+USERSYMBOL,個人情報 ,4
+USERSYMBOL,医療機関 ,5
+USERSYMBOL,水利     ,6
+USERSYMBOL,高速道路 ,7
+# 届け出情報は Mp.iniより取得
+#
+##--------------------------------------------------------------------------------------------
+## 背景登録レイヤ
+##   ※EditUlayView.exe はEditUlayView.def を参照
+##     EditUlayView.def とID、名称を合わせること
+##
+## EDITULAY,端末タイプ？[0:共通 1:指令台 2:表示盤 3:署所],参照許可有無,Default合成情報,レイヤID,レイヤ名称
+## 端末タイプ
+## 参照許可有無 1:表示/2:非表示
+## Default合成表示 1:デフォルト
+## レイヤID SYMLAY_LAYER1～10までしか表示されない?
+
+##EDITULAY,1,0,0,SYMULAY_LAYER1,指令レイヤ(非表示)
+#2026/3/25 FJJ楠 署はレイヤ表示の定義を分けているため、要注意
+EDITULAY,1,1,1,SYMULAY_LAYER1,地図修正レイヤ
+EDITULAY,1,1,1,SYMULAY_LAYER2,車両通行不能
+EDITULAY,1,1,1,SYMULAY_LAYER3,☆注意情報☆
+EDITULAY,1,1,1,SYMULAY_LAYER4,その他
+EDITULAY,1,1,1,SYMULAY_LAYER5,不感地帯
+EDITULAY,2,1,1,SYMULAY_LAYER1,地図修正レイヤ
+EDITULAY,2,1,1,SYMULAY_LAYER2,車両通行不能
+EDITULAY,2,1,1,SYMULAY_LAYER3,☆注意情報☆
+EDITULAY,2,1,1,SYMULAY_LAYER4,その他
+EDITULAY,2,1,1,SYMULAY_LAYER5,不感地帯
+EDITULAY,3,1,1,SYMULAY_LAYER1,地図修正レイヤ
+EDITULAY,3,1,1,SYMULAY_LAYER2,車両通行不能
+EDITULAY,3,2,1,SYMULAY_LAYER3,☆注意情報☆
+EDITULAY,3,1,1,SYMULAY_LAYER4,その他
+EDITULAY,3,1,1,SYMULAY_LAYER5,不感地帯
+EDITULAY,4,1,1,SYMULAY_LAYER1,地図修正レイヤ
+EDITULAY,4,1,1,SYMULAY_LAYER2,車両通行不能
+EDITULAY,4,2,1,SYMULAY_LAYER3,☆注意情報☆
+EDITULAY,4,1,1,SYMULAY_LAYER4,その他
+EDITULAY,4,1,1,SYMULAY_LAYER5,不感地帯
+
+#EDITULAY,2,1,1,SYMULAY_LAYER2,基地局用レイヤ_CH_999
+#EDITULAY,3,0,1,SYMULAY_LAYER3,基地局用レイヤ_ラベル
+#EDITULAY,1,1,1,SYMULAY_LAYER4,基地局用レイヤ_CH_999
+#EDITULAY,1,1,1,SYMULAY_LAYER5,白塗り
+#EDITULAY,1,1,1,SYMULAY_LAYER6,建物面
+#EDITULAY,1,1,1,SYMULAY_LAYER7,公共施設面
+#EDITULAY,1,1,1,SYMULAY_LAYER8,赤文字（住所情報等）
+#EDITULAY,1,1,1,SYMULAY_LAYER9,黒文字
+#EDITULAY,1,1,1,SYMULAY_LAYER10,黒線　細
+#EDITULAY,1,1,1,SYMULAY_LAYER11,青線　太
+#EDITULAY,1,1,1,SYMULAY_LAYER12,青文字
+#EDITULAY,4,1,1,SYMULAY_LAYER1,基地局用レイヤ_ラベル
+#EDITULAY,4,1,1,SYMULAY_LAYER2,基地局用レイヤ_CH_999
+#EDITULAY,4,1,1,SYMULAY_LAYER3,基地局用レイヤ_ラベル
+#EDITULAY,4,1,1,SYMULAY_LAYER4,基地局用レイヤ_CH_999
+#EDITULAY,4,1,1,SYMULAY_LAYER5,白塗り
+#EDITULAY,4,1,1,SYMULAY_LAYER6,建物面
+#EDITULAY,4,1,1,SYMULAY_LAYER7,公共施設面
+#EDITULAY,4,1,1,SYMULAY_LAYER8,赤文字（住所情報等）
+#EDITULAY,4,1,1,SYMULAY_LAYER9,黒文字
+#EDITULAY,4,1,1,SYMULAY_LAYER10,黒線　細
+#EDITULAY,4,1,1,SYMULAY_LAYER11,青線　太
+#EDITULAY,4,1,1,SYMULAY_LAYER12,青文字
+
+#EDITULAY,1,1,1,SYMULAY_LAYER2,白塗り
+#EDITULAY,1,1,1,SYMULAY_LAYER130,建物面
+#EDITULAY,1,1,1,SYMULAY_LAYER131,公共施設面
+#EDITULAY,1,1,1,SYMULAY_LAYER132,赤文字（住所情報等）
+#EDITULAY,1,1,1,SYMULAY_LAYER133,黒文字
+#EDITULAY,1,1,1,SYMULAY_LAYER135,黒線　細
+#EDITULAY,1,1,1,SYMULAY_LAYER136,青線　太
+#EDITULAY,1,1,1,SYMULAY_LAYER137,青文字
+#EDITULAY,1,1,1,SYMULAY_LAYER134,黒線　太
+#EDITULAY,1,1,1,SYMULAY_LAYER138,シンボル
+#EDITULAY,1,1,1,SYMULAY_LAYER139,緑線　細
+#EDITULAY,1,1,1,SYMULAY_LAYER140,破線
+#EDITULAY,1,1,1,SYMULAY_LAYER142,広域　黒文字
+#EDITULAY,1,1,1,SYMULAY_LAYER143,広域　黒線
+#EDITULAY,1,1,1,SYMULAY_LAYER144,広域　赤線
+#EDITULAY,1,1,1,SYMULAY_LAYER146,建物塗りつぶし
+#EDITULAY,1,1,1,SYMULAY_LAYER151,広域 緑線
+#EDITULAY,1,1,1,SYMULAY_LAYER152,広域　灰線
+#EDITULAY,1,1,1,SYMULAY_LAYER153,広域　トンネル（破線）
+#EDITULAY,1,1,1,SYMULAY_LAYER154,署所シンボル
+#EDITULAY,1,1,1,SYMULAY_LAYER155,地図表示盤用名称
+#EDITULAY,1,1,1,SYMULAY_LAYER156,広域白塗り
+#EDITULAY,1,1,1,SYMULAY_LAYER157,毛無不感エリア
+#EDITULAY,1,1,1,SYMULAY_LAYER158,基地局名
+#EDITULAY,1,1,1,SYMULAY_LAYER159,基地シンボル
+#EDITULAY,1,1,1,SYMULAY_LAYER160,広域　青文字
+#EDITULAY,1,1,1,SYMULAY_LAYER161,砂丘杭
+#EDITULAY,1,1,1,SYMULAY_LAYER162,砂丘杭ラベル
+#EDITULAY,1,1,1,SYMULAY_LAYER163,基地局用レイヤ_CH_999
+#EDITULAY,1,1,1,SYMULAY_LAYER164,基地局用レイヤ_ラベル
+#EDITULAY,1,1,1,SYMULAY_LAYER163,基地局用レイヤ_CH_999
+#EDITULAY,1,1,1,SYMULAY_LAYER1,基地局用レイヤ_ラベル
+#EDITULAY,1,1,1,SYMULAY_LAYER2,基地局用レイヤ_CH_999
+#EDITULAY,1,1,1,SYMULAY_LAYER3,基地局用レイヤ_ラベル
+#EDITULAY,1,1,1,SYMULAY_LAYER4,基地局用レイヤ_CH_999
+#EDITULAY,1,1,1,SYMULAY_LAYER5,基地局用レイヤ_ラベル
+#EDITULAY,1,1,1,SYMULAY_LAYER165,車両通行不能
+#EDITULAY,1,1,1,SYMULAY_LAYER166,Ｄｒヘリ出動エリア
+#EDITULAY,1,1,1,SYMULAY_LAYER167,広域　赤文字
+#EDITULAY,1,1,1,SYMULAY_LAYER168,破線　赤
+#EDITULAY,1,1,1,SYMULAY_LAYER169,河川
+#EDITULAY,1,1,1,SYMULAY_LAYER170,緑文字
+#EDITULAY,1,1,1,SYMULAY_LAYER171,青線　中
+#EDITULAY,1,1,1,SYMULAY_LAYER172,赤　面
+#EDITULAY,1,1,1,SYMULAY_LAYER173,黒　面
+#EDITULAY,1,1,1,SYMULAY_LAYER175,☆注意情報☆
+#EDITULAY,1,1,1,SYMULAY_LAYER174,赤線
+#EDITULAY,1,1,1,SYMULAY_LAYER176,日本海
+
+
+##
+##--------------------------------------------------------------------------------------------
+# レイヤ合成パターン
+## 1:火災, 2:救急, 3:救助, 4:その他, 8:警戒, 9:未決定
+##--------------------------------------------------------------------------------------------
+## ユーザシンボルは TargetLayMng.dat.xx (xx:レイヤ合成パターン)に設定
+## LAYERPATTERN, シンボル情報, パターン0～
+## 未登録時は非表示とする
+##   シンボル情報 REPORT,x,名称※     -- 届け出種別（※正式名称はMp.iniに種別名称を設定)
+##                         合成パターン0～毎の表示フラグ(:区切り)
+##                         0:1:2:3:---------
+LAYERPATTERN,REPORT,1,道路,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+LAYERPATTERN,REPORT,2,煙火,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+LAYERPATTERN,REPORT,3,催他,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+LAYERPATTERN,REPORT,4,水利,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+LAYERPATTERN,REPORT,5,催物,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+##
+##   シンボル情報 SYMULAY_LAYERx -- 端末タイプ,レイヤID
+##                         合成パターン0～毎の表示フラグ(:区切り)
+##
+#LAYERPATTERN,SYMULAY_LAYER,1,1,共通,1:1:0:1:1:1:1:1:1:1:1:1:1:1:1
+#LAYERPATTERN,SYMULAY_LAYER,1,4,本部,1:0:0:1:1:1:1:1:1:1:1:1:1:1:1
+#LAYERPATTERN,SYMULAY_LAYER,1,2,署共,0:1:0:0:0:0:0:0:0:0:0:0:0:0:0
+#LAYERPATTERN,SYMULAY_LAYER,1,3,署独,0:0:0:0:0:0:0:0:0:0:0:0:0:0:0
+#LAYERPATTERN,SYMULAY_LAYER,3,1,共通,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+#LAYERPATTERN,SYMULAY_LAYER,3,4,本部,0:0:0:0:0:0:0:0:0:0:0:0:0:0:0
+#LAYERPATTERN,SYMULAY_LAYER,3,2,署共,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+#LAYERPATTERN,SYMULAY_LAYER,3,3,署独,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+#LAYERPATTERN,SYMULAY_LAYER,1,1,指令,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+#指令台用
+LAYERPATTERN,SYMULAY_LAYER,1,1,基地局用レイヤ_ラベル,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+LAYERPATTERN,SYMULAY_LAYER,1,2,基地局用レイヤ_CH_999,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+LAYERPATTERN,SYMULAY_LAYER,1,3,基地局用レイヤ_ラベル,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+LAYERPATTERN,SYMULAY_LAYER,1,4,基地局用レイヤ_CH_999,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+LAYERPATTERN,SYMULAY_LAYER,1,5,白塗り               ,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+LAYERPATTERN,SYMULAY_LAYER,1,6,建物面               ,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+LAYERPATTERN,SYMULAY_LAYER,1,7,公共施設面           ,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+LAYERPATTERN,SYMULAY_LAYER,1,8,赤文字（住所情報等） ,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+LAYERPATTERN,SYMULAY_LAYER,1,9,黒文字               ,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+LAYERPATTERN,SYMULAY_LAYER,1,10,黒線　細            ,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+#LAYERPATTERN,SYMULAY_LAYER,1,11,青線　太            ,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+#LAYERPATTERN,SYMULAY_LAYER,1,12,青文字              ,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+#表示盤用
+LAYERPATTERN,SYMULAY_LAYER,2,1,表示,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+#署所用
+LAYERPATTERN,SYMULAY_LAYER,3,1,署所,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+#メンテ用
+LAYERPATTERN,SYMULAY_LAYER,4,1,基地局用レイヤ_ラベル,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+LAYERPATTERN,SYMULAY_LAYER,4,2,基地局用レイヤ_CH_999,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+LAYERPATTERN,SYMULAY_LAYER,4,3,基地局用レイヤ_ラベル,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+LAYERPATTERN,SYMULAY_LAYER,4,4,基地局用レイヤ_CH_999,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+LAYERPATTERN,SYMULAY_LAYER,4,5,白塗り               ,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+LAYERPATTERN,SYMULAY_LAYER,4,6,建物面               ,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+LAYERPATTERN,SYMULAY_LAYER,4,7,公共施設面           ,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+LAYERPATTERN,SYMULAY_LAYER,4,8,赤文字（住所情報等） ,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+LAYERPATTERN,SYMULAY_LAYER,4,9,黒文字               ,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+LAYERPATTERN,SYMULAY_LAYER,4,10,黒線　細            ,1:1:1:1:1:1:1:1:1:1:1:1:1:1:1
+##--------------------------------------------------------------------------------------------
+# 局エリア SYMULAY_LAYER IDを登録
+## 
+##--------------------------------------------------------------------------------------------
+#BASESTATIONAREA,SYMULAY_LAYER,5:6:7
